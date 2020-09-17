@@ -47,7 +47,7 @@ python manage.py runserver
 ```
 
 ## Available endpoints
-### 'api/v1/populate_data'
+### [api/v1/populate_data](api/v1/populate_data)
 An optional endpoint just to create initial data for both coffee machines and coffee pods.
 
 ### [api/v1/coffee_machines/](api/v1/coffee_machines/)
