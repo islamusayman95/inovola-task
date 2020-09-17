@@ -11,8 +11,9 @@ class CoffeeMachineViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         query_set = self.queryset
+        data_format = self.request.query_params.get('format')
 
-        if self.request.query_params:
+        if self.request.query_params and not data_format:
             product_type = self.request.query_params.get('product_type')
             water_line_compatible = self.request.query_params.get('water_line_compatible')
             model = self.request.query_params.get('model')
@@ -48,7 +49,9 @@ class CoffeePodViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         query_set = self.queryset
-        if self.request.query_params:
+        data_format = self.request.query_params.get('format')
+
+        if self.request.query_params and not data_format:
             product_type = self.request.query_params.get('product_type')
             coffee_flavor = self.request.query_params.get('coffee_flavor')
             pack_size = self.request.query_params.get('pack_size')

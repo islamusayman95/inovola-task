@@ -11,6 +11,6 @@ router.register(r'coffee_machines', view_sets.CoffeeMachineViewSet)
 router.register(r'coffee_pods', view_sets.CoffeePodViewSet)
 
 urlpatterns = [
-    path('populate_data', views.PopulateData.as_view(), name='populate_data'),
+    path('populate_data/', views.PopulateData.as_view(), name='populate_data'),
     path('', include(router.urls)),
 ]
